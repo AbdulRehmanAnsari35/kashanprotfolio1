@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Kashan GFX - Home</title>
+  <link href="./style.css" rel="stylesheet">
+
+  <style>
+    /* Active Link */
+    .nav-link.active { color: #3b82f6; }
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: #3b82f6;
+      border-radius: 9999px;
+    }
+
+    /* Fix overflow bug */
+    html, body {
+      overflow-x: hidden;
+    }
+    * {
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body class="bg-black text-white font-sans flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800/50">
+    <nav class="container mx-auto px-4 lg:px-8 h-16 flex items-center justify-between">
+      <a href="index.html" class="text-2xl font-bold tracking-wider">
+        <span class="text-neon-glow">Muhammad Kashan GFX</span>
+      </a>
+
+      <div class="hidden md:flex font-semibold space-x-8" id="desktop-nav-links">
+        <a href="index.html" data-page="index" class="nav-link relative text-gray-400 hover:text-blue-400">Home</a>
+        <a href="portfolio.html" data-page="portfolio" class="nav-link relative text-gray-400 hover:text-blue-400">Portfolio</a>
+        <a href="services.html" data-page="services" class="nav-link relative text-gray-400 hover:text-blue-400">Services</a>
+        <a href="about.html" data-page="about" class="nav-link relative text-gray-400 hover:text-blue-400">About</a>
+        <a href="contact.html" data-page="contact" class="nav-link relative text-gray-400 hover:text-blue-400">Contact</a>
+      </div>
+
+      <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-black/90 p-4 border-t border-gray-800">
+      <a href="index.html" class="block py-2 text-white hover:text-blue-400">Home</a>
+      <a href="portfolio.html" class="block py-2 text-white hover:text-blue-400">Portfolio</a>
+      <a href="services.html" class="block py-2 text-white hover:text-blue-400">Services</a>
+      <a href="about.html" class="block py-2 text-white hover:text-blue-400">About</a>
+      <a href="contact.html" class="block py-2 text-white hover:text-blue-400">Contact</a>
+    </div>
+  </header>
+
+  <section 
+  id="home" 
+  class="relative min-h-[calc(100vh-64px)] flex flex-col items-center justify-center p-8 text-center bg-black overflow-hidden"
+>
+  <!-- Background Image -->
+  <img 
+    src="./images/home.jpg.jpg" 
+    alt="Background" 
+    class="absolute inset-0 w-full h-full object-cover opacity-80 pointer-events-none"
+  >
+
+  <!-- Overlay (for darkness effect) -->
+  <div class="absolute inset-0 bg-black/70"></div>
+
+  <!-- Main Content -->
+  <div class="relative z-10">
+    <h1 class="text-6xl sm:text-7xl lg:text-8xl font-extrabold leading-tight mb-6 ">
+      <span class="text-yellow-400 block">I Design Thumbnails</span>
+      <span class="text-white block">That Get <span class="text-purple-600">Clicks</span></span>
+    </h1>
+
+    <p class="text-xl text-gray-400 mb-10 opacity-0 animate-[fadeIn_1s_ease-out_1s_forwards] transition-opacity duration-1000">
+      Modern, Eye-Catching, High CTR Designs.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 mb-24 mx-auto">
+        <a href="portfolio.html"
+          class="px-8 py-3 rounded-full font-semibold text-white transition duration-300 hover:shadow-button-glow bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center">
+          View Portfolio <span class="ml-2">→</span>
+        </a>
+        <a href="contact.html"
+          class="px-8 py-3 rounded-full font-semibold text-white border border-purple-600 transition duration-300 hover:bg-purple-800/30 bg-black flex items-center justify-center hover:shadow-button-glow">
+          <span class="mr-2">▶</span> Get Started
+        </a>
+      </div>
+      
+
+    <div class="flex flex-wrap justify-center gap-8 md:gap-20 max-w-4xl mx-auto">
+      <div class="text-center transition-transform hover:scale-105 duration-300">
+        <div class="text-4xl font-bold text-neon-glow mb-1">999+</div>
+        <div class="text-gray-400 text-sm">Thumbnails Created</div>
+      </div>
+      <div class="text-center transition-transform hover:scale-105 duration-300">
+        <div class="text-4xl font-bold text-neon-glow mb-1">500+</div>
+        <div class="text-gray-400 text-sm">Happy Clients</div>
+      </div>
+      <div class="text-center transition-transform hover:scale-105 duration-300">
+        <div class="text-4xl font-bold text-neon-glow mb-1">95%</div>
+        <div class="text-gray-400 text-sm">CTR Improvement</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="py-10 text-center text-gray-500 text-sm border-t border-gray-800/50 mt-auto">
+    &copy; 2025 Muhammad Kashan GFX. All Rights Reserved.
+    <br/> <a href="https://wa.me/923102867896" target="_blank"
+    class="text-blue-600 font-bold underline">
+    Developer Contact  
+  </a>
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const menuBtn = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>

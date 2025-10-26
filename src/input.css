@@ -1,0 +1,12 @@
+/* src/input.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom class for the neon text effect (text-neon-glow) */
+.text-neon-glow {
+    background-image: linear-gradient(90deg, #3b82f6, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.8), 0 0 20px rgba(168, 85, 247, 0.8);
+}

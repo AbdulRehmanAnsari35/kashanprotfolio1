@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Kashan GFX - Contact</title>
+  <link href="./style.css" rel="stylesheet">
+  <style>
+    /* Active link */
+    .nav-link.active {
+      color: #3b82f6;
+      position: relative;
+    }
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: #3b82f6;
+      border-radius: 9999px;
+    }
+
+    html, body {
+      overflow-x: hidden;
+    }
+    * {
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body class="bg-black text-white font-sans flex flex-col min-h-screen">
+
+  <!-- ✅ Navbar -->
+  <header class="fixed top-0 left-0 w-full bg-black/80 backdrop-blur-md border-b border-gray-800 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+      <a href="index.html" class="text-2xl font-bold text-neon-glow">Muhammad Kashan GFX</a>
+
+      <button id="menu-btn" class="md:hidden flex flex-col space-y-1 focus:outline-none">
+        <span class="w-6 h-0.5 bg-white"></span>
+        <span class="w-6 h-0.5 bg-white"></span>
+        <span class="w-6 h-0.5 bg-white"></span>
+      </button>
+
+      <nav id="menu" class="hidden md:flex space-x-8 font-semibold relative">
+        <a href="index.html" class="nav-link text-gray-300 hover:text-blue-400 transition">Home</a>
+        <a href="portfolio.html" class="nav-link text-gray-300 hover:text-blue-400 transition">Portfolio</a>
+        <a href="services.html" class="nav-link text-gray-300 hover:text-blue-400 transition">Services</a>
+        <a href="about.html" class="nav-link text-gray-300 hover:text-blue-400 transition">About</a>
+        <a href="contact.html" class="nav-link active relative">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden flex-col bg-black/95 border-t border-gray-800 px-6 py-4 space-y-3">
+      <a href="index.html" class="block text-gray-300 hover:text-blue-400">Home</a>
+      <a href="portfolio.html" class="block text-gray-300 hover:text-blue-400">Portfolio</a>
+      <a href="services.html" class="block text-gray-300 hover:text-blue-400">Services</a>
+      <a href="about.html" class="block text-gray-300 hover:text-blue-400">About</a>
+      <a href="contact.html" class="block text-blue-400 font-semibold">Contact</a>
+    </div>
+  </header>
+
+  <!-- ✅ Main Section -->
+  <main class="flex-grow pt-20">
+    <section id="contact" class="py-20 px-4 bg-black">
+      <div class="container mx-auto max-w-6xl">
+        <h2 class="text-5xl font-bold text-center mb-4">
+          <span class="text-neon-glow">Get In Touch</span>
+        </h2>
+        <p class="text-center text-gray-400 mb-12">
+          Ready to create thumbnails that get clicks? Let's discuss your project and bring your vision to life.
+        </p>
+
+        <div class="grid lg:grid-cols-2 gap-10">
+          <!-- Contact Form -->
+          <div class="bg-gray-900/50 p-8 rounded-xl border border-gray-800 shadow-card-glow transition duration-300 hover:border-blue-500">
+            <h3 class="text-2xl font-bold mb-6">Send Me a Message</h3>
+            <form class="space-y-6">
+              <input type="text" placeholder="Enter your name" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-white transition duration-200" required>
+              <input type="email" placeholder="Enter your email" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-white transition duration-200" required>
+              <textarea placeholder="Tell me about your project..." rows="6" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-white transition duration-200" required></textarea>
+              <button type="submit" class="w-full py-3 rounded-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-cyan-500 transition hover:opacity-90 hover:shadow-button-glow">
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="space-y-10">
+            <div class="bg-gray-900/50 p-8 rounded-xl border border-gray-800 shadow-card-glow transition duration-300 hover:border-purple-500">
+              <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+              <div class="space-y-4 text-gray-300">
+                <div class="flex items-center space-x-3 transition transform hover:scale-[1.02]">
+                  <div class="w-8 h-8 flex items-center justify-center bg-blue-600 rounded-full">📧</div>
+                  <span>kashanshayed@gmail.com</span>
+                </div>
+                <div class="flex items-center space-x-3 transition transform hover:scale-[1.02]">
+                  <div class="w-8 h-8 flex items-center justify-center bg-green-600 rounded-full">🟢</div>
+                  <span>+923376282557</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-900/50 p-8 rounded-xl border border-gray-800 shadow-card-glow transition duration-300 hover:border-purple-500">
+              <h3 class="text-2xl font-bold mb-6">Why Choose Me?</h3>
+              <ul class="space-y-3 text-gray-300">
+                <li class="flex items-center space-x-2 hover:text-blue-400 transition"><span class="text-blue-400">•</span> Fast 24-48 hour turnaround</li>
+                <li class="flex items-center space-x-2 hover:text-blue-400 transition"><span class="text-blue-400">•</span> Unlimited revisions until perfect</li>
+                <li class="flex items-center space-x-2 hover:text-blue-400 transition"><span class="text-blue-400">•</span> Money-back guarantee</li>
+                <li class="flex items-center space-x-2 hover:text-blue-400 transition"><span class="text-blue-400">•</span> Proven track record of success</li>
+              </ul>
+              <div class="mt-8 text-center">
+                <p class="text-4xl font-bold text-neon-glow mb-1 hover:text-white transition">&lt; 2 Hours</p>
+                <p class="text-gray-400 text-sm">Average Response Time</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ✅ Footer -->
+  <footer class="py-10 text-center text-gray-500 text-sm border-t border-gray-800/50 mt-auto">
+    &copy; 2025 Hassan GFX. All Rights Reserved.
+    <br/> <a href="https://wa.me/923102867896" target="_blank"
+    class="text-blue-600 font-bold underline">
+    Developer Contact  
+  </a>
+  </footer>
+
+  <!-- ✅ Responsive Menu Script -->
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  </script>
+
+</body>
+</html>
